@@ -4,11 +4,6 @@
 " URL:        https://github.com/xu-cheng/brew.vim
 " ----------------------------------------------------------------------------
 
-if (exists("b:did_ftplugin"))
-  finish
-endif
-let b:did_ftplugin = 1
-
 function! s:isFormula()
   for i in range(1, line('$'))
     if !empty(matchstr(getline(i), 'class \S\+ *< *Formula'))
