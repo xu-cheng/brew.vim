@@ -20,8 +20,9 @@ function! s:setFileType()
   endif
 endfunction
 
-augroup filetypedetect
-  au! BufNewFile,BufRead *.rb call s:setFileType()
+augroup brew_formula_file_detect
+  autocmd!
+  autocmd BufNewFile,BufRead *.rb call s:setFileType()
 augroup END
 
 " vim: nowrap sw=2 sts=2 ts=8 noet:
